@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Prüfziffer Rechner</title>
+		
+		<script>
+			"use strict";
+
+			function fZahlen() {	
+
+			let vZahl1 = document.getElementById("vZahl1").value * 1;
+			let vZahl2 = document.getElementById("vZahl2").value * 3;
+			let vZahl3 = document.getElementById("vZahl3").value * 1;
+			let vZahl4 = document.getElementById("vZahl4").value * 3;
+			let vZahl5 = document.getElementById("vZahl5").value * 1;
+			let vZahl6 = document.getElementById("vZahl6").value * 3;
+			let vZahl7 = document.getElementById("vZahl7").value * 1;
+			let vZahl8 = document.getElementById("vZahl8").value * 3;
+			let vZahl9 = document.getElementById("vZahl9").value * 1;
+			let vZahl10 = document.getElementById("vZahl10").value * 3;
+			let vZahl11 = document.getElementById("vZahl11").value * 1;
+			let vZahl12 = document.getElementById("vZahl12").value * 3;
+			let vZahl13 = document.getElementById("vZahl13").value * 1;
+
+			let berechnung = Number(vZahl1) + Number(vZahl2) + Number(vZahl3) + Number(vZahl4) + Number(vZahl5) + Number(vZahl6) + Number(vZahl7) + Number(vZahl8) + Number(vZahl9) + Number(vZahl10) + Number(vZahl11) + Number(vZahl12) + Number(vZahl13);
+
+			let Ausgabe = "Die Artikelnummer lautet : " + vZahl1 + vZahl2+ vZahl3+ vZahl4+ vZahl5+ vZahl6+ vZahl7+ vZahl8+ vZahl9+ vZahl10+ vZahl11+ vZahl12+ vZahl13 + " Die Prüfziffer lautet : " + fMax(berechnung) ;
+			document.getElementById("idAusgabe").innerHTML = Ausgabe;
+
+			}
+
+			function fMax(berechnung) {
+
+			if (berechnung % 10 == 0 ) {return 0 }	
+			else {return berechnung % 10 }
+
+			}
+			
+			
+		</script>
+	</head>
+		
+		
+
+
+	<body>
+		<h1>Prüfziffer Rechner</h1>
+		Artikelnummer: <input id="vZahl1" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl2" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl3" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl4" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl5" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl6" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl7" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl8" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl9" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl10" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl11" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl12" type="text" size="1" value="0" maxlength="1">
+		<input id="vZahl13" type="text" size="1" value="0" maxlength="1">
+		<br><br>
+		<button onclick="fZahlen()">Prüfsumme berechnen!</button>
+		<br><br>
+		<div id="idAusgabe">Ausgabe von der Prüfsumme.</div>
+
+	
+
+
+	</body>
+</html>
